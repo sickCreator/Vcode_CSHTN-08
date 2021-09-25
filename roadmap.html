@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>FrontEndHtml</title>
+    <style>
+        #navmenu
+        {
+           background: #00F260;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to left, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           border-radius: 30px;
+           padding:0 0 5px 0;
+           overflow:hidden;
+           width: 100%;
+           position: fixed;
+
+        }
+
+        .navlink li
+        {
+            display: inline;
+            padding: 12px 50px;
+            float:right;
+            text-align:center;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius:30px;
+        }
+
+        [id ^="navr"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+
+       .navlink li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+        #navlist
+        {
+            float:left;
+        }
+
+        .fecontent
+        {
+            border-top-style: solid;
+            border-top-width: 85px;
+            border-top-color: white;
+            margin-left:70px;
+            text-align:center;
+            width: 92%;
+            border-radius: 30px;
+            padding: 4px 0px;
+            box-shadow: 15px 15px 10px grey;
+            background-image: url("{% static 'images/img13.png' %}");
+            background-size: 100% 100%;
+            background-attachment:fixed;
+            }
+
+
+
+        .fecontent1
+        {
+            box-shadow: 5px 2px 40px white;
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #56CCF2;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .fecontent2
+        {
+            box-shadow: 5px 2px 40px white;
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #00F260;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .fecontent3
+        {
+            box-shadow: 5px 2px 40px white;
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #DCE35B;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .fecontent4
+        {
+            box-shadow: 5px 2px 40px white;
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #FF5F6D;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .fecontent5
+        {
+            box-shadow: 5px 2px 40px white;
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #ec008c;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        #feimage1
+        {
+            margin-left: 250px;
+        }
+        #feimage2
+        {
+            margin-left: 250px;
+
+        }
+        #fevideo1
+        {
+            margin-left: 250px;
+
+        }
+        .fecontent2 img
+        {
+            width:500px;
+            height:500px;
+        }
+        [id^="feimage"]
+        {
+            margin-left: 250px;
+        }
+        [id^="fevideo"]
+        {
+            margin-left: 250px;
+        }
+        #hcontent
+        {
+            margin-left: 350px;
+        }
+
+        .footer
+        {
+            height:50px;
+            padding: 80px 300px;
+            background: #00F260;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .footercontent li
+        {
+            display:inline;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            tex-align:center;
+            font-size: 20px;
+            padding: 0px 20px;
+            float: right;
+        }
+
+        #footerimage
+        {
+            width:150px;
+            height:150px;
+
+
+        }
+
+        #footerimageli
+        {
+            position: relative;
+            right: 800px;
+            bottom: 90px;
+        }
+        [id ^="fot"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+        .footercontent li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+       .avatarli
+       {
+        border-style:none;
+       }
+
+       #avatarli
+       {
+        border-style:none;
+       }
+
+
+       .avatar
+       {
+         border-radius: 200px;
+         width:35px;
+         height:35px;
+       }
+
+       html
+       {
+            scroll-behavior: smooth;
+       }
+
+
+        div a
+        {
+            text-decoration:none;
+            color: white
+        }
+
+        div a:hover
+        {
+            color : blue;
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="navmenu">
+    <ul id="nav" class="navlink">
+        <li id="navlist"><a id="navr0" href="http://127.0.0.1:8000/roadmap">Course</a></li>
+        <li id="avatarli" class="avatarli"><a id="navr6" href="Home.html"><img class="avatar"  src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="navr5.1" href="#vc">VC</a></li>
+        <li ><a id="navr5" href="#database">Data Base</a></li>
+        <li ><a id="navr4" href="#backend">Back End</a></li>
+        <li ><a id="navr3" href="#frontend">Front End</a></li>
+        <li ><a id="navr2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="navr1" href="http://127.0.0.1:8000/">Home</a></li>
+    </ul>
+
+</div>
+
+
+<div id="introcontent" class="fecontent">
+<div class="fecontent1">
+    <h2>ROADMAP</h2>
+</div>
+<br><br><br><br><br><br><br><br>
+<b><div id="introcontent1" >
+<div class="fecontent4"><h4>Let's become fullstack web developer!!!</h4></div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="fecontent2" id="frontend"><h2>FRONTEND</h2></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/FeHtml">HTML</a></h3></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/FeCss">CSS</a></h3></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/FeJs">JAVASCRIPT</a></h3></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/fequiz1">FRONTEND-QUIZ-1</a></h3></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/fequiz1">FRONTEND-QUIZ-2</a></h3></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/fequiz1">FRONTEND-QUIZ-3</a></h3></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/feassign1">FRONTEND-ASSIGNMENT-1</a></h3></div><br><br>
+    <div class="fecontent2"><h3><a href="http://127.0.0.1:8000/feassign1">FRONTEND-ASSIGNMENT-2</a></h3></div><br><br>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="fecontent3" id="backend"><h2>BACKEND</h2></div><br><br>
+    <div class="fecontent3"><h3><a href="http://127.0.0.1:8000/BeDjango">PYTHON-DJANGO</a></h3></div><br><br>
+    <div class="fecontent3"><h3><a href="http://127.0.0.1:8000/fequiz1">BACKEND-QUIZ-1</a></h3></div><br><br>
+    <div class="fecontent3"><h3><a href="http://127.0.0.1:8000/fequiz1">BACKEND-QUIZ-2</a></h3></div><br><br>
+    <div class="fecontent3"><h3><a href="http://127.0.0.1:8000/feassign1">BACKEND-ASSIGNMENT-1</a></h3></div><br><br>
+    <div class="fecontent3"><h3><a href="http://127.0.0.1:8000/feassign1">BACKEND-ASSIGNMENT-2</a></h3></div><br><br>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="fecontent4" id="database"><h2>DATABASE</h2></div><br><br>
+    <div class="fecontent4"><h3><a href="http://127.0.0.1:8000/DbMysql">PYTHON-MYSQL</a></h3></div><br><br>
+    <div class="fecontent4"><h3><a href="http://127.0.0.1:8000/fequiz1">DATABASE-QUIZ-1</a></h3></div><br><br>
+    <div class="fecontent4"><h3><a href="http://127.0.0.1:8000/fequiz1">DATABASE-QUIZ-2</a></h3></div><br><br><br><br>
+    <div class="fecontent4"><h3><a href="http://127.0.0.1:8000/feassign1">DATABASE-ASSIGNMENT-1</a></h3></div><br><br>
+    <div class="fecontent4"><h3><a href="http://127.0.0.1:8000/feassign1">DATABASE-ASSIGNMENT-2</a></h3></div><br><br>
+    <br><br><br><br><br><br><br><br>
+
+    <div class="fecontent5" id="vc"><h2>VERSION CONTROL</h2></div><br><br>
+    <div class="fecontent5"><h3><a href="http://127.0.0.1:8000/github">GIT-GITHUB</a></h3></div><br><br>
+    <div class="fecontent5"><h3><a href="http://127.0.0.1:8000/fequiz1">VERSION CONTROL-QUIZ-1</a></h3></div><br><br>
+    <div class="fecontent5"><h3><a href="http://127.0.0.1:8000/fequiz1">VERSION CONTROL-QUIZ-2</a></h3></div><br><br>
+    <div class="fecontent5"><h3><a href="http://127.0.0.1:8000/feassign1">VERSION CONTROL-ASSIGNMENT-1</a></h3></div><br><br>
+    <div class="fecontent5"><h3><a href="http://127.0.0.1:8000/feassign1">VERSION CONTROL-ASSIGNMENT-2</a></h3></div><br><br>
+    <br><br><br><br><br><br><br><br>
+
+    </div></b>
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="footer">
+<div class="footercontent">
+
+    <ul>
+        <li class="avatarli"><a id="fot6" href="Home.html"><img class="avatar" src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="fot5" href="Home.html">login</a></li>
+        <li ><a id="fot4" href="#developer1">Contact</a></li>
+        <li ><a id="fot3" href="#aboutvcode">About</a></li>
+        <li ><a id="fot2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="fot1" href="http://127.0.0.1:8000/">Home</a></li>
+        <li id="footerimageli"><img id="footerimage" src="{% static 'images/img.png' %}"></li>
+    </ul>
+
+</div>
+</div>
+
+</body>
+</html>

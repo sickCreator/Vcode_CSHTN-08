@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>FrontEndHtml</title>
+    <style>
+        #navmenu
+        {
+           background: #00F260;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to left, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           border-radius: 30px;
+           padding:0 0 5px 0;
+           overflow:hidden;
+           width: 100%;
+           position: fixed;
+
+        }
+
+        .navlink li
+        {
+            display: inline;
+            padding: 12px 50px;
+            float:right;
+            text-align:center;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius:30px;
+        }
+
+        [id ^="navr"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+
+       .navlink li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+        #navlist
+        {
+            float:left;
+        }
+
+        .fecontent
+        {
+            border-top-style: solid;
+            border-top-width: 85px;
+            border-top-color: white;
+            margin-left:70px;
+            text-align:center;
+            width: 90%;
+            border-radius: 30px;
+            padding: 4px 0px;
+            box-shadow: 15px 15px 10px grey;
+            background-image: url("{% static 'images/img13.png' %}");
+            background-size: 100% 100%;
+            background-attachment:fixed;
+            }
+
+        .fecontent2
+        {
+            color:yellow;
+            margin: auto;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            width: 90%;
+
+            text-align: justify;
+            border-radius: 20px;
+            background: #6a3093;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 2px 2px 15px white;
+           }
+
+        .fecontent1
+        {
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #DA22FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 1px 1px 12px white;
+        }
+
+        #feimage1
+        {
+            margin-left: 250px;
+        }
+        #feimage2
+        {
+            margin-left: 250px;
+
+        }
+        #fevideo1
+        {
+            margin-left: 250px;
+
+        }
+        .fecontent2 img
+        {
+            width:500px;
+            height:500px;
+        }
+        [id^="feimage"]
+        {
+            margin-left: 250px;
+        }
+        [id^="fevideo"]
+        {
+            margin-left: 250px;
+        }
+        #hcontent
+        {
+            margin-left: 350px;
+        }
+
+        .footer
+        {
+            height:50px;
+            padding: 80px 300px;
+            background: #00F260;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .footercontent li
+        {
+            display:inline;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            tex-align:center;
+            font-size: 20px;
+            padding: 0px 20px;
+            float: right;
+        }
+
+        #footerimage
+        {
+            width:150px;
+            height:150px;
+
+
+        }
+
+        #footerimageli
+        {
+            position: relative;
+            right: 800px;
+            bottom: 90px;
+        }
+        [id ^="fot"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+        .footercontent li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+       .avatarli
+       {
+        border-style:none;
+       }
+
+       #avatarli
+       {
+        border-style:none;
+       }
+
+
+       .avatar
+       {
+         border-radius: 200px;
+         width:35px;
+         height:35px;
+       }
+
+       html
+       {
+            scroll-behavior: smooth;
+       }
+
+       .btn
+       {
+            color:white;
+            height: 60px;
+            font-size: 30px;
+            border-radius: 50px;
+            background: #00F260;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 1px 1px 12px white;
+       }
+
+        .btn:hover
+        {
+            color:grey;
+            box-shadow: 1px 1px 12px brown;
+        }
+
+
+       .answer
+       {
+           color:white;
+           border-radius: 50px;
+           box-shadow: 1px 1px 12px white;
+           padding: 10px 0px;
+
+           height: 40px;
+           width: 450px;
+           font-size: 30px;
+           text-align:center;
+           background: #457fca;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+       }
+
+        .question
+        {
+            font-size:20px;
+
+        }
+
+       #answer11
+       {
+            margin-left:550px;
+            font-size:50px;
+            height:50px;
+            text-align:center;
+            width:150px;
+            border-radius: 30px;
+            background: #FF5F6D;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+       }
+
+       .question a
+       {
+          text-decoration:none;
+          font-size:20px;
+          color: white;
+       }
+
+       .question a:hover
+       {
+          font-size:40px;
+          color: brown;
+       }
+
+
+
+    </style>
+<script>
+    function submitAssign()
+    {
+        alert("Assignment Successfully Submitted!!!");
+    }
+</script>
+
+
+</head>
+<body>
+<div id="navmenu">
+    <ul id="nav" class="navlink">
+        <li id="navlist"><a id="navr0" href="http://127.0.0.1:8000/roadmap">Course</a></li>
+        <li id="avatarli" class="avatarli"><a id="navr6" href="Home.html"><img class="avatar"  src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="navr5" href="#question3">Difficult</a></li>
+        <li ><a id="navr4" href="#question2">Medium</a></li>
+        <li ><a id="navr3" href="#question1">Easy</a></li>
+        <li ><a id="navr2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="navr1" href="http://127.0.0.1:8000/">Home</a></li>
+    </ul>
+
+</div>
+
+
+<div id="q" class="fecontent">
+<div class="fecontent1">
+</div><br>
+    <div class="fecontent1"><h2>Front-End-Assignment-1</h2></div><br>
+
+    <div id="q1" class="fecontent2">
+    <div class="fecontent1"><h3> Make Tribute Page</h3></div><br>
+        <div class="question" id="question1">
+            The simplest website you can make as a beginner is a tribute page of someone you admire in your life.<br>
+            It requires only basic knowledge of HTML and CSS. Make a webpage writing about that person adding his/her image.<br>
+            On the top of the webpage, add the image and name of the person and below that give layout for the rest of the details.<br>
+            You can use paragraphs, lists, links, images with CSS to give it a descent look. Add a suitable background color and font style on your webpage.<br>
+            Most of the parts you can make using HTML but to give it a better look using a bit of CSS. Take help from the link given below.<br>
+            <br><a href="https://www.codeseek.co/preview/womJzx">Link1</a><br>
+            <a href="https://codepen.io/coderofdark/pen/BzPArk">Link2</a><br><br>
+            <input class="btn" type="file">
+        </div></div>
+
+    <br><br><br><br>
+
+    <div id="q2" class="fecontent2">
+    <div class="fecontent1"><h3> Make webpage including form</h3></div><br>
+        <div class="question" id="question2">
+            Forms are always an essential part of any project and you will be working with a lot of forms in most of the applications so why not practice it earlier<br>
+            and test your knowledge. Once you get familiar with the input field or basic tags in HTML to create a form make a project using all those tags.<br>
+            How to use a text field, checkbox, radio button, date, and other important elements in a single form. You will be learning how to give a proper structure to a webpage while creating a form.<br>
+            Knowledge of HTML/HTML5 is good enough but you can use a bit of CSS to make the project look better. Take help from the links given below. <br>
+            <br><a href="https://codepen.io/gregg50/pen/QWwOVKV">Link1</a><br>
+            <a href="https://codepen.io/laurencenairne/full/zLXRPq/">Link2</a><br><br>
+            <input class="btn" type="file">
+        </div></div>
+
+    <br><br><br><br>
+
+    <div id="q3" class="fecontent2">
+    <div class="fecontent1"><h3> Make a landing page</h3></div><br>
+        <div class="question" id="question3">
+            A landing page is another good project you can make using HTML and CSS but it requires a solid knowledge of these two building blocks.<br>
+            You will be using lots of creativity while making a landing page. You will practice how to add footer and header, create columns, align-items, divide the sections and a lot of things.<br>
+            You will have to use CSS carefully keeping in mind that different elements do not overlap with each other. You will also take care of color combinations, padding, margin,<br>
+            space between sections, paragraphs, and boxes. Color combinations should go well with each other for different sections or backgrounds. You can take help from the link given below.<br>
+            <br><a href="https://jolly-kalam-23776e.netlify.app/fullscreenlanding/">Link1</a><br>
+            <a href="https://jolly-kalam-23776e.netlify.app/cssgridresponsive/">Link2</a><br><br>
+            <input class="btn" type="file">
+        </div></div>
+
+
+<br><br><br><br><br><br><br><br>
+    <div class="answer" id="answer11"><a href="http://127.0.0.1:8000/"><button onclick="submitAssign()" class="btn">Submit</button></a></div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="footer">
+<div class="footercontent">
+
+    <ul>
+        <li class="avatarli"><a id="fot6" href="Home.html"><img class="avatar" src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="fot5" href="Home.html">login</a></li>
+        <li ><a id="fot4" href="http://127.0.0.1:8000/">Contact</a></li>
+        <li ><a id="fot3" href="http://127.0.0.1:8000/">About</a></li>
+        <li ><a id="fot2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="fot1" href="http://127.0.0.1:8000/">Home</a></li>
+        <li id="footerimageli"><img id="footerimage" src="{% static 'images/img.png' %}"></li>
+    </ul>
+
+</div>
+</div>
+
+</body>
+</html>

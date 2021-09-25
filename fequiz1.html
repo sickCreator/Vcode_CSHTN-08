@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>FrontEndHtml</title>
+    <style>
+        #navmenu
+        {
+           background: #00F260;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to left, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           border-radius: 30px;
+           padding:0 0 5px 0;
+           overflow:hidden;
+           width: 100%;
+           position: fixed;
+
+        }
+
+        .navlink li
+        {
+            display: inline;
+            padding: 12px 50px;
+            float:right;
+            text-align:center;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius:30px;
+        }
+
+        [id ^="navr"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+
+       .navlink li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+        #navlist
+        {
+            float:left;
+        }
+
+        .fecontent
+        {
+            border-top-style: solid;
+            border-top-width: 85px;
+            border-top-color: white;
+            margin-left:70px;
+            text-align:center;
+            width: 90%;
+            border-radius: 30px;
+            padding: 4px 0px;
+            box-shadow: 15px 15px 10px grey;
+            background-image: url("{% static 'images/img13.png' %}");
+            background-size: 100% 100%;
+            background-attachment:fixed;
+            }
+
+        .fecontent2
+        {
+            color:yellow;
+            margin: auto;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            width: 90%;
+
+            text-align: justify;
+            border-radius: 20px;
+            background: #6a3093;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 2px 2px 15px white;
+           }
+
+        .fecontent1
+        {
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #DA22FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 1px 1px 12px white;
+        }
+
+        #feimage1
+        {
+            margin-left: 250px;
+        }
+        #feimage2
+        {
+            margin-left: 250px;
+
+        }
+        #fevideo1
+        {
+            margin-left: 250px;
+
+        }
+        .fecontent2 img
+        {
+            width:500px;
+            height:500px;
+        }
+        [id^="feimage"]
+        {
+            margin-left: 250px;
+        }
+        [id^="fevideo"]
+        {
+            margin-left: 250px;
+        }
+        #hcontent
+        {
+            margin-left: 350px;
+        }
+
+        .footer
+        {
+            height:50px;
+            padding: 80px 300px;
+            background: #00F260;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .footercontent li
+        {
+            display:inline;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            tex-align:center;
+            font-size: 20px;
+            padding: 0px 20px;
+            float: right;
+        }
+
+        #footerimage
+        {
+            width:150px;
+            height:150px;
+
+
+        }
+
+        #footerimageli
+        {
+            position: relative;
+            right: 800px;
+            bottom: 90px;
+        }
+        [id ^="fot"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+        .footercontent li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+       .avatarli
+       {
+        border-style:none;
+       }
+
+       #avatarli
+       {
+        border-style:none;
+       }
+
+
+       .avatar
+       {
+         border-radius: 200px;
+         width:35px;
+         height:35px;
+       }
+
+       html
+       {
+            scroll-behavior: smooth;
+       }
+
+       .btn
+       {
+            color:white;
+            height: 60px;
+            font-size: 30px;
+            border-radius: 50px;
+            background: #00F260;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            box-shadow: 1px 1px 12px white;
+       }
+
+        .btn:hover
+        {
+            color:grey;
+            box-shadow: 1px 1px 12px brown;
+        }
+
+
+       .answer
+       {
+           color:white;
+           border-radius: 50px;
+           box-shadow: 1px 1px 12px white;
+           padding: 10px 0px;
+
+           height: 40px;
+           width: 450px;
+           font-size: 30px;
+           text-align:center;
+           background: #457fca;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+       }
+
+       .question
+       {
+            margin-left:350px;
+       }
+
+       #answer11
+       {
+            margin-left:220px;
+            font-size:50px;
+            height:100px;
+            text-align:center;
+            width:900px;
+            border-radius: 30px;
+            background: #FF5F6D;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+       }
+
+
+
+
+    </style>
+
+    <script>
+        var count=0;
+        var countr=0;
+        var countw=0;
+        var temp;
+        var temp1;
+
+        function checkAnswer(q,a)
+        {
+            count=count+1;
+            if(count>10)
+            {
+                document.getElementById("answer11").innerHTML = "Your Quiz is Completed(refresh)!!!";
+
+            }
+            else if(q==1 && a!=2)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer1").innerHTML = "Wrong Answer (2 is correct)";
+            }
+            else if(q==2 && a!=1)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer2").innerHTML = "Wrong Answer (1 is correct)";
+            }
+            else if(q==3 && a!=1)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer3").innerHTML = "Wrong Answer (1 is correct)";
+            }
+            else if(q==4 && a!=3)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer4").innerHTML = "Wrong Answer (3 is correct)";
+            }
+            else if(q==5 && a!=4)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer5").innerHTML = "Wrong Answer (4 is correct)";
+            }
+            else if(q==6 && a!=4)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer6").innerHTML = "Wrong Answer (4 is correct)";
+            }
+            else if(q==7 && a!=2)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer7").innerHTML = "Wrong Answer (2 is correct)";
+            }
+            else if(q==8 && a!=1)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer8").innerHTML = "Wrong Answer (1 is correct)";
+            }
+            else if(q==9 && a!=4)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer9").innerHTML = "Wrong Answer (4 is correct)";
+            }
+            else if(q==10 && a!=2)
+            {
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById("answer10").innerHTML = "Wrong Answer (2 is correct)";
+            }
+            else
+            {
+                countr=countr+1;
+                temp=(countr/count)*100;
+                temp1="answer"+q;
+                document.getElementById("answer11").innerHTML = "Your Accuracy : "+temp+"%";
+                document.getElementById(temp1).innerHTML = "Correct Answer";
+
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+<div id="navmenu">
+    <ul id="nav" class="navlink">
+        <li id="navlist"><a id="navr0" href="http://127.0.0.1:8000/roadmap">Course</a></li>
+        <li id="avatarli" class="avatarli"><a id="navr6" href="Home.html"><img class="avatar"  src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="navr5" href="#question8">Difficult</a></li>
+        <li ><a id="navr4" href="#question4">Medium</a></li>
+        <li ><a id="navr3" href="#question3">Easy</a></li>
+        <li ><a id="navr2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="navr1" href="http://127.0.0.1:8000/">Home</a></li>
+    </ul>
+
+</div>
+
+
+<div id="q" class="fecontent">
+<div class="fecontent1">
+</div><br>
+    <div class="fecontent1"><h2>Front-End-Quiz-1 :<br> All the best!!!</h2></div><br>
+
+    <div id="q1" class="fecontent2">
+    <div class="fecontent1"><h3>What does HTML stands for?</h3></div><br><br>
+        <div class="question" id="question1">
+        <button class="btn" onclick="checkAnswer(1,1)">1.Hyper Text Language</button><br><br>
+        <button class="btn" onclick="checkAnswer(1,2)">2.Hyper Text Markup Language</button><br><br>
+        <button class="btn" onclick="checkAnswer(1,3)">3.Hyper Media Markup Language</button><br><br>
+        <button class="btn" onclick="checkAnswer(1,4)">4.None</button><br><br><br><br>
+<div class="answer" id="answer1">Choose Answer</div>
+        </div></div>
+
+    <br><br><br><br>
+
+    <div id="q2" class="fecontent2">
+    <div class="fecontent1"><h3>How is document type initialized in HTML5.?</h3></div><br><br>
+        <div class="question" id="question2">
+        <button class="btn" onclick="checkAnswer(2,1)">1.DOCTYPE HTML</button><br><br>
+        <button class="btn" onclick="checkAnswer(2,2)">2.doctype</button><br><br>
+        <button class="btn" onclick="checkAnswer(2,3)">3.Doctype HTML</button><br><br>
+        <button class="btn" onclick="checkAnswer(2,4)">4.None</button><br><br><br><br>
+<div class="answer" id="answer2">Choose Answer</div>
+        </div>  </div>
+
+    <br><br><br><br>
+
+     <div id="q3" class="fecontent2">
+    <div class="fecontent1"><h3>Which of the following HTML Elements is used for making any text bold ?</h3></div><br><br>
+        <div class="question" id="question3">
+        <button class="btn" onclick="checkAnswer(3,1)">1.&lt;b&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(3,2)">2.&lt;li&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(3,3)">3.&lt;style&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(3,4)">4.None</button><br><br><br><br>
+<div class="answer" id="answer3">Choose Answer</div>
+</div></div>
+
+    <br><br><br><br>
+
+         <div id="q4" class="fecontent2">
+    <div class="fecontent1"><h3>Which of the following HTML element is used for creating an unordered list?</h3></div><br><br>
+        <div class="question" id="question4">
+        <button class="btn" onclick="checkAnswer(4,1)">1.&lt;ol&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(4,2)">2.&lt;dl&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(4,3)">3.&lt;ul&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(4,4)">4.None</button><br><br><br><br>
+<div class="answer" id="answer4">Choose Answer</div>
+</div>
+</div>
+
+    <br><br><br><br>
+
+    <div id="q5" class="fecontent2">
+    <div class="fecontent1"><h3>What is the font-size of the h1 heading tag?</h3></div><br><br>
+        <div class="question" id="question5">
+        <button class="btn" onclick="checkAnswer(5,1)">1.&nbsp;3&nbsp;em</button><br><br>
+        <button class="btn" onclick="checkAnswer(5,2)">2.&nbsp;5&nbsp;em</button><br><br>
+        <button class="btn" onclick="checkAnswer(5,3)">3.&nbsp;10&nbsp;em</button><br><br>
+        <button class="btn" onclick="checkAnswer(5,4)">4.&nbsp;2&nbsp;em</button><br><br><br><br>
+<div class="answer" id="answer5">Choose Answer</div>
+</div>
+</div>
+
+    <br><br><br><br>
+
+    <div id="q6" class="fecontent2">
+    <div class="fecontent1"><h3>How many heading tags are there in HTML5?</h3></div><br><br>
+        <div class="question" id="question6">
+        <button class="btn" onclick="checkAnswer(6,1)">1.&nbsp;10</button><br><br>
+        <button class="btn" onclick="checkAnswer(6,2)">2.&nbsp;3</button><br><br>
+        <button class="btn" onclick="checkAnswer(6,3)">3.&nbsp;2</button><br><br>
+        <button class="btn" onclick="checkAnswer(6,4)">4.&nbsp;6</button><br><br><br><br>
+<div class="answer" id="answer6">Choose Answer</div>
+</div>
+</div>
+
+    <br><br><br><br>
+
+    <div id="q7" class="fecontent2">
+    <div class="fecontent1"><h3>Which of the following attributes is used to add link to any element?</h3></div><br><br>
+        <div class="question" id="question7">
+        <button class="btn" onclick="checkAnswer(7,1)">1.Link</button><br><br>
+        <button class="btn" onclick="checkAnswer(7,2)">2.href</button><br><br>
+        <button class="btn" onclick="checkAnswer(7,3)">3.ref</button><br><br>
+        <button class="btn" onclick="checkAnswer(7,4)">4.None</button><br><br><br><br>
+<div class="answer" id="answer7">Choose Answer</div>
+</div>
+</div>
+
+    <br><br><br><br>
+
+    <div id="q8" class="fecontent2">
+    <div class="fecontent1"><h3>Which of the following tags is used to add a line-break in HTML?</h3></div><br><br>
+        <div class="question" id="question8">
+        <button class="btn" onclick="checkAnswer(8,1)">1.&lt;br&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(8,2)">2.&lt;b&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(8,3)">3.&lt;i&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(8,4)">4.&lt;hr&gt;</button><br><br><br><br>
+<div class="answer" id="answer8">Choose Answer</div>
+</div>
+</div>
+
+    <br><br><br><br>
+
+    <div id="q9" class="fecontent2">
+    <div class="fecontent1"><h3>Which of the following attributes is used to open an hyperlink in new tab?</h3></div><br><br>
+        <div class="question" id="question9">
+        <button class="btn" onclick="checkAnswer(9,1)">1.ref</button><br><br>
+        <button class="btn" onclick="checkAnswer(9,2)">2.href</button><br><br>
+        <button class="btn" onclick="checkAnswer(9,3)">3.link</button><br><br>
+        <button class="btn" onclick="checkAnswer(9,4)">4.target</button><br><br><br><br>
+<div class="answer" id="answer9">Choose Answer</div>
+</div>
+</div>
+
+    <br><br><br><br>
+
+    <div id="q10" class="fecontent2">
+    <div class="fecontent1"><h3>Which tag is used to add an header in HTML5 table?</h3></div><br><br>
+        <div class="question" id="question10">
+        <button class="btn" onclick="checkAnswer(10,1)">1.&lt;tr&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(10,2)">2.&lt;th&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(10,3)">3.&lt;thead&gt;</button><br><br>
+        <button class="btn" onclick="checkAnswer(10,4)">4.None</button><br><br><br><br>
+<div class="answer" id="answer10">Choose Answer</div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br>
+    <div class="answer" id="answer11">Your Accuracy:</div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="footer">
+<div class="footercontent">
+
+    <ul>
+        <li class="avatarli"><a id="fot6" href="Home.html"><img class="avatar" src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="fot5" href="Home.html">login</a></li>
+        <li ><a id="fot4" href="http://127.0.0.1:8000/">Contact</a></li>
+        <li ><a id="fot3" href="http://127.0.0.1:8000/">About</a></li>
+        <li ><a id="fot2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="fot1" href="http://127.0.0.1:8000/">Home</a></li>
+        <li id="footerimageli"><img id="footerimage" src="{% static 'images/img.png' %}"></li>
+    </ul>
+
+</div>
+</div>
+
+</body>
+</html>

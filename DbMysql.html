@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>FrontEndHtml</title>
+    <style>
+        #navmenu
+        {
+           background: #00F260;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to left, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           border-radius: 30px;
+           padding:0 0 5px 0;
+           overflow:hidden;
+           width: 100%;
+           position: fixed;
+
+        }
+
+        .navlink li
+        {
+            display: inline;
+            padding: 12px 50px;
+            float:right;
+            text-align:center;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius:30px;
+        }
+
+        [id ^="navr"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+
+       .navlink li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+        #navlist
+        {
+            float:left;
+        }
+
+        .fecontent
+        {
+            border-top-style: solid;
+            border-top-width: 85px;
+            border-top-color: white;
+            margin-left:70px;
+            text-align:center;
+            width: 90%;
+            border-radius: 30px;
+            padding: 4px 0px;
+            box-shadow: 15px 15px 10px grey;
+            background-image: url("{% static 'images/img13.png' %}");
+            background-size: 100% 100%;
+            background-attachment:fixed;
+            box-shadow: 1px 1px 12px white;
+            }
+
+        .fecontent2
+        {
+            color:yellow;
+            margin: auto;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            width: 90%;
+
+            text-align: justify;
+            border-radius: 20px;
+            background: #6a3093;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           }
+
+        .fecontent1
+        {
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            font-size:30px;
+            width: 50%;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #DA22FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        #feimage1
+        {
+            margin-left: 250px;
+        }
+        #feimage2
+        {
+            margin-left: 250px;
+
+        }
+        #fevideo1
+        {
+            margin-left: 250px;
+
+        }
+        .fecontent2 img
+        {
+            width:500px;
+            height:500px;
+        }
+        [id^="feimage"]
+        {
+            margin-left: 250px;
+        }
+        [id^="fevideo"]
+        {
+            margin-left: 250px;
+        }
+        #hcontent
+        {
+            margin-left: 350px;
+        }
+        .footer
+        {
+            height:50px;
+            padding: 80px 300px;
+            background: #00F260;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .footercontent li
+        {
+            display:inline;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            tex-align:center;
+            font-size: 20px;
+            padding: 0px 20px;
+            float: right;
+        }
+
+        #footerimage
+        {
+            width:150px;
+            height:150px;
+
+
+        }
+
+        #footerimageli
+        {
+            position: relative;
+            right: 800px;
+            bottom: 90px;
+        }
+        [id ^="fot"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+        .footercontent li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+       .avatarli
+       {
+        border-style:none;
+       }
+
+       #avatarli
+       {
+        border-style:none;
+       }
+
+
+       .avatar
+       {
+         border-radius: 200px;
+         width:35px;
+         height:35px;
+       }
+
+       html
+       {
+            scroll-behavior: smooth;
+       }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="navmenu">
+    <ul id="nav" class="navlink">
+        <li id="navlist"><a id="navr0" href="http://127.0.0.1:8000/roadmap">Course</a></li>
+        <li id="avatarli" class="avatarli"><a id="navr6" href="Home.html"><img class="avatar"  src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="navr5" href="Home.html">Section 3</a></li>
+        <li ><a id="navr4" href="#developer1">Section 2</a></li>
+        <li ><a id="navr3" href="#aboutvcode">Section 1</a></li>
+        <li ><a id="navr2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="navr1" href="http://127.0.0.1:8000/">Home</a></li>
+    </ul>
+
+</div>
+
+
+<div id="introcontent" class="fecontent">
+<div class="fecontent1">
+    <b>Database Connectivity : Python and Mysql</b>
+</div>
+<b><div id="introcontent1" class="fecontent2">
+<div class="fecontent1"><h2>Intoduction : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>MySQL Database</h3></div><br><br>
+Python needs a MySQL driver to access the MySQL database.<br><br>
+In this tutorial we will use the driver "MySQL Connector".<br><br>
+We recommend that you use PIP to install "MySQL Connector".<br><br>
+PIP is most likely already installed in your Python environment.<br><br>
+<br><br><br><div class="fecontent1"><h3>Install MySQL Driver</h3></div><br><br>
+Navigate your command line to the location of PIP, and type the following:<br><br>
+    C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>python -m pip install mysql-connector-python<br>
+
+    <br><br><div class="fecontent1"><h3>Test MySQL Connector</h3></div><br><br>
+To test if the installation was successful, or if you already have "MySQL Connector" installed, create a Python page with the following content:
+    <br><br>
+import mysql.connector<br>
+    <br><br><div class="fecontent1"><h3>Create Connection</h3></div><br><br>
+Start by creating a connection to the database.Use the username and password from your MySQL database<br><br>
+import mysql.connector<br>
+
+    <div id="feimage1"><img src="{% static 'images/img38.png' %}"></div>
+
+    <br><br><br><br><div class="fecontent1"><h3>Video Tutorial : Python-Mysql Introduction</h3></div><br><br>
+    <div id="fevideo1"><iframe width="560" height="315" src="https://www.youtube.com/embed/x7SwgcpACng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    </div></b>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<b><div id="editorcontent1" class="fecontent2">
+<div class="fecontent1"><h2>Getting Started : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>Learn HTML Using Notepad or TextEdit</h3></div><br><br>
+Web pages can be created and modified by using professional HTML editors.<br><br>
+However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).<br><br>
+We believe in that using a simple text editor is a good way to learn HTML.<br><br>
+
+    <br><br><br><br><div class="fecontent1"><h3>Step 1: Open Notepad (PC)</h3></div><br><br>
+Windows 8 or later: Open the Start Screen (the window symbol at the bottom left on your screen). Type Notepad.<br><br>
+Windows 7 or earlier: Open Start > Programs > Accessories > Notepad<br>
+Mac<br>
+Open Finder > Applications > TextEdit<br>
+        Also change some preferences to get the application to save files correctly. In Preferences > Format > choose "Plain Text"<br>
+    Then under "Open and Save", check the box that says "Display HTML files as HTML code instead of formatted text".<br>
+    Then open a new document to place the code.<br><br>
+    <br><br><div class="fecontent1"><h3>Step 2: Write Some HTML</h3></div><br><br>
+Write or copy the following HTML code into Notepad:<br><br>
+<div id="feimage3"><img src="{% static 'images/img21.png' %}"></div>
+    <br><br><br><br>
+    <div class="fecontent1"><h3>Step 3: Save the HTML Page</h3></div><br><br>
+Save the file on your computer. Select File > Save as in the Notepad menu.<br>
+    Name the file "index.htm" and set the encoding to UTF-8 (which is the preferred encoding for HTML files).<br><br>
+    <div id="feimage4"><img src="{% static 'images/img22.png' %}"></div>
+
+    <br><br><div class="fecontent1"><h3>Step 4: View the HTML Page in Your Browser</h3></div><br><br><br><br>
+    Open the saved HTML file in your favorite browser (double click on the file, or right-click - and choose "Open with").<br>
+    The result will look much like this:<br><br>
+    <div id="feimage5"><img src="{% static 'images/img23.png' %}"></div>
+
+    <br><br><div class="fecontent1"><h3>Vcode IDE: (Online for free)</h3></div><br><br><br><br>
+    With our free online editor, you can edit the HTML code and view the result in your browser.<br>
+    It is the perfect tool when you want to test code fast.<br><br>
+    <div id="feimage6"><img src="{% static 'images/img23.png' %}"></div>
+
+    <br><br><br><br><div class="fecontent1"><h3>Video Tutorial : HTML EVOLUTION</h3></div><br><br>
+    <div id="fevideo2"><iframe width="560" height="315" src="https://www.youtube.com/embed/lojq_sqCjWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    </div></b>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<b><div id="hnpcontent1" class="fecontent2">
+<div class="fecontent1"><h2>Headings & Paragraphs : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>HTML Headings</h3></div><br><br>
+HTML headings are titles or subtitles that you want to display on a webpage.<br>
+HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.<br>
+&lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading.<br><br>
+<div id="feimage7"><img src="{% static 'images/img24.png' %}"></div>
+    <br><br><br><br><div class="fecontent1"><h3>Headings Are Important</h3></div><br><br>
+Search engines use the headings to index the structure and content of your web pages.<br><br>
+Users often skim a page by its headings. It is important to use headings to show the document structure.<br>
+&lt;h1&gt; headings should be used for main headings, followed by &lt;h2&gt; headings, then the less important &lt;h3&gt;, and so on.<br><br>
+
+    <br><br><div class="fecontent1"><h3>HTML Paragraphs</h3></div><br><br>
+A paragraph always starts on a new line, and is usually a block of text.<br>
+    The HTML &lt;p&gt; element defines a paragraph.<br>
+    A paragraph always starts on a new line, and browsers automatically add some white space
+    (a margin) before and after a paragraph.<br><br>
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+
+    <br><br><br><br>
+    <div class="fecontent1"><h3>HTML Display</h3></div><br><br>
+You cannot be sure how HTML will be displayed.<br>
+    Large or small screens, and resized windows will create different results.<br>
+    With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.<br>
+    The browser will automatically remove any extra spaces and lines when the page is displayed<br><br>
+    <div id="feimage8"><img src="{% static 'images/img25.png' %}"></div>
+
+    <br><br><div class="fecontent1"><h3>HTML Horizontal Rules</h3></div><br><br><br><br>
+    The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.<br>
+    The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page<br><br>
+    <div id="feimage9"><img src="{% static 'images/img26.png' %}"></div>
+
+    <br><br><div class="fecontent1"><h3>HTML Line Breaks</h3></div><br><br><br><br>
+    The HTML <br> element defines a line break.<br>
+    Use &lt;br&gt; if you want a line break (a new line) without starting a new paragraph<br>
+    &lt;p&gt;This is&lt;br&gt;a paragraph&lt;br&gt;with line breaks.&lt;/p&gt;<br>
+
+    <br><br><div class="fecontent1"><h3>HTML pre Element</h3></div><br><br><br><br>
+    The HTML &lt;pre&gt; element defines preformatted text.<br>
+    The text inside a &lt;pre&gt; element is displayed in a fixed-width font (usually Courier), and it
+    preserves both spaces and line breaks<br><br>
+    <div id="feimage10"><img src="{% static 'images/img27.png' %}"></div>
+
+    <br><br><br><br><div class="fecontent1"><h3>Video Tutorial : Html Headings & Paragraphs</h3></div><br><br>
+    <div id="fevideo3">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y1mnFpZuMg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    </div></b>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<b><div id="formatcontent1" class="fecontent2">
+<div class="fecontent1"><h2>HTML Text Formatting : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>HTML &lt;b&gt; and &lt;strong&gt; Elements</h3></div><br><br>
+HTML headings are titles or subtitles that you want to display on a webpage.<br>
+HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.<br>
+&lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading.<br><br>
+<div id="feimage11"><img src="{% static 'images/img24.png' %}"></div>
+    <br><br><br><br><div class="fecontent1"><h3>Headings Are Important</h3></div><br><br>
+The HTML &lt;b&gt; element defines bold text, without any extra importance.<br><br>
+The HTML &lt;strong&gt; element defines text with strong importance. The content inside is typically displayed in bold.<br>
+&lt;h1&gt; headings should be used for main headings, followed by &lt;h2&gt; headings, then the less important &lt;h3&gt;, and so on.<br><br>
+&lt;b&gt;This text is bold&lt;/b&gt;<br>
+    &lt;strong&gt;This text is important!&lt;/strong&gt;
+
+    <br><br><div class="fecontent1"><h3>HTML &lt;i&gt; and &lt;em&gt; Elements</h3></div><br><br>
+The HTML &lt;i&gt; element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.<br>
+    The &lt;i&gt; tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.<br>
+    <br>
+    &lt;i&gt;This text is italic&lt;/i&gt;<br><br>
+    The HTML &lt;em&gt; element defines emphasized text. The content inside is typically displayed in italic.<br>
+    A screen reader will pronounce the words in &lt;em&gt; with an emphasis, using verbal stress.<br><br>
+    &lt;em&gt;This text is emphasized&lt;/em&gt;
+
+    <br><br><br><br>
+    <div class="fecontent1"><h3>HTML &lt;small&gt; Element</h3></div><br><br>
+The HTML &lt;small&gt; element defines smaller text<br><br>
+    &lt;small&gt;This is some smaller text.&lt;/small&gt;<br><br>
+
+    <br><br><div class="fecontent1"><h3>HTML &lt;mark&gt;, &lt;del&gt; and &lt;ins&gt; Element</h3></div><br><br><br><br>
+    The HTML &lt;mark&gt; element defines text that should be marked or highlighted<br>
+    &lt;p&gt;Do not forget to buy &lt;mark&gt;milk&lt;/mark&gt; today.&lt;/p&gt;<br><br>
+    he HTML &lt;del&gt; element defines text that has been deleted from a document.
+    Browsers will usually strike a line through deleted text<br><br>
+    &lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; red.&lt;/p&gt;<br><br>
+    The HTML &lt;ins&gt; element defines a text that has been inserted into a document.
+    Browsers will usually underline inserted text<br><br>
+    &lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;.&lt;/p&gt;
+
+    <br><br><div class="fecontent1"><h3>HTML &lt;sub&gt; and &lt;sup&gt; Element</h3></div><br><br><br><br>
+    The HTML &lt;sub&gt; element defines subscript text. Subscript text appears half a character below the normal line,<br>
+    and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H2O<br><br>
+    &lt;p&gt;This is &lt;sub&gt;subscripted&lt;/sub&gt; text.&lt;/p&gt;<br><br>
+    The HTML &lt;sup&gt; element defines superscript text. Superscript text appears half a character above the normal line, <br>
+        and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW<br><br>
+        &lt;p&gt;This is &lt;sup&gt;superscripted&lt;/sup&gt; text.&lt;/p&gt;<br><br>
+        <div id="feimage12"><img src="{% static 'images/img28.png' %}"></div>
+
+    <br><br><br><br><div class="fecontent1"><h3>Video Tutorial : Html Formatting Tags</h3></div><br><br>
+    <div id="fevideo4">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pEpqf_OvIPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div></b>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<b><div id="lntcontent1" class="fecontent2">
+<div class="fecontent1"><h2>HTML Lists and Tables : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>Unordered HTML List</h3></div><br><br>
+An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt; tag.<br>
+The list items will be marked with bullets (small black circles) by default<br>
+
+    <br><br><br><br><div class="fecontent1"><h3>Ordered HTML List</h3></div><br><br>
+An ordered list starts with the &lt;ol&gt; tag. Each list item starts with the &lt;li&gt; tag.<br>
+The list items will be marked with numbers by default.<br>
+
+    <br><br><div class="fecontent1"><h3>HTML Description Lists</h3></div><br><br>
+HTML also supports description lists.<br>
+    A description list is a list of terms, with a description of each term.<br>
+    The &lt;dl&gt; tag defines the description list, the &lt;dt&gt; tag defines the term (name), and the &lt;dd&gt; tag describes each term<br>
+    <br><br>
+    <div id="feimage13"><img src="{% static 'images/img29.png' %}"></div>
+
+    <br><br><br><br>
+    <div class="fecontent1"><h3>Define an HTML Table</h3></div><br><br>
+A table in HTML consists of table cells inside rows and columns<br>
+    <div id="feimage14"><img src="{% static 'images/img30.png' %}"></div>
+
+    <br><br><div class="fecontent1"><h3>Table Cells</h3></div><br><br><br><br>
+    Each table cell is defined by a &lt;td&gt; and a &lt;/td&gt; tag.<br>
+    Everything between &lt;td&gt; and &lt;/td&gt; are the content of the table cell.<br>
+
+    <br><br><div class="fecontent1"><h3>Table Rows</h3></div><br><br><br><br>
+    Each table row starts with a &lt;tr&gt; and end with a &lt;/tr&gt; tag<br>
+    You can have as many rows as you like in a table, just make sure that the number of cells are the same in each row.<br><br>
+
+    <br><br><div class="fecontent1"><h3>Table Headers</h3></div><br><br><br><br>
+    Sometimes you want your cells to be headers, in those cases use the &lt;th&gt; tag instead of the &lt;td&gt; tag<br>
+    By default, the text in &lt;th&gt; elements are bold and centered, but you can change that with CSS.<br><br>
+
+    <br><br><br><br><div class="fecontent1"><h3>Video Tutorial : Html Lists and Tables</h3></div><br><br>
+    <div id="fevideo5">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2AmN8rsYmNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div></b>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<b><div id="linkcontent1" class="fecontent2">
+<div class="fecontent1"><h2>HTML Links : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>HTML Links - Hyperlinks</h3></div><br><br>
+HTML links are hyperlinks.<br>
+You can click on a link and jump to another document.<br>
+    When you move the mouse over a link, the mouse arrow will turn into a little hand.<br>
+
+    <br><br><br><br><div class="fecontent1"><h3>HTML Links - Syntax</h3></div><br><br>
+The HTML &lt;a&gt; tag defines a hyperlink. It has the following syntax:<br><br>
+&lt;a href="url"&gt;link text&lt;/a&gt;<br><br>
+The most important attribute of the &lt;a&gt; element is the href attribute, which indicates the link's destination.<br>
+The link text is the part that will be visible to the reader.<br>
+    Clicking on the link text, will send the reader to the specified URL address.<br><br>
+    &lt;a href="https://www.w3schools.com/"&gt;Visit W3Schools.com!&lt;/a&gt;<br>
+    By default, links will appear as follows in all browsers:<br><br>
+    An unvisited link is underlined and blue<br>
+A visited link is underlined and purple<br>
+An active link is underlined and red<br>
+
+    <br><br><div class="fecontent1"><h3>HTML Links - The target Attribute</h3></div><br><br>
+By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.<br>
+    The target attribute specifies where to open the linked document.<br>
+    The target attribute can have one of the following values<br>
+    _self - Default. Opens the document in the same window/tab as it was clicked<br>
+    _blank - Opens the document in a new window or tab<br>
+    _parent - Opens the document in the parent frame<br>
+    _top - Opens the document in the full body of the window<br><br>
+    &lt;a href="https://www.w3schools.com/" target="_blank"&gt;Visit W3Schools!&lt;/a&gt;
+    <br><br>
+
+    <br><br><br><br>
+    <div class="fecontent1"><h3>Absolute URLs vs. Relative URLs</h3></div><br><br>
+Both examples above are using an absolute URL (a full web address) in the href attribute.<br>
+    A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part)<br><br>
+    <div id="feimage15"><img src="{% static 'images/img31.png' %}"></div>
+
+    <br><br><div class="fecontent1"><h3>HTML Links - Use an Image as a Link</h3></div><br><br><br><br>
+    To use an image as a link, just put the &lt;img&gt; tag inside the &lt;a&gt; tag<br><br>
+
+    <br><br><div class="fecontent1"><h3>Link to an Email Address</h3></div><br><br><br><br>
+    Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email)<br>
+
+    <br><br><br><br><div class="fecontent1"><h3>Link Titles</h3></div><br><br><br><br>
+    The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.<br><br>
+    <div id="feimage16"><img src="{% static 'images/img32.png' %}"></div>
+    <br><br><br><br><div class="fecontent1"><h3>Video Tutorial : Html Links</h3></div><br><br>
+    <div id="fevideo6">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DiSvq5SgLMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div></b>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<b><div id="inicontent1" class="fecontent2">
+<div class="fecontent1"><h2>HTML Multimedia : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>HTML Images Syntax</h3></div><br><br>
+Images can improve the design and the appearance of a web page.<br>
+The HTML &lt;img&gt; tag is used to embed an image in a web page.<br>
+    Images are not technically inserted into a web page; images are linked to web pages. <br>
+    The &lt;img&gt; tag creates a holding space for the referenced image.<br>
+    The &lt;img&gt; tag is empty, it contains attributes only, and does not have a closing tag.<br>
+    The &lt;img&gt; tag has two required attributes:<br><br>
+    src - Specifies the path to the image<br>
+alt - Specifies an alternate text for the image<br><br>
+    &lt;img src="url" alt="alternatetext"&gt;<br><br>
+
+    <br><br><br><br><div class="fecontent1"><h3>The src Attribute</h3></div><br><br>
+The required src attribute specifies the path (URL) to the image.<br>
+When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page.<br>
+    Therefore, make sure that the image actually stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon.<br>
+    The broken link icon and the alt text are shown if the browser cannot find the image.<br><br>
+&lt;img src="img_ch.jpg" alt="Flowers in Ch"&gt;<br><br>
+
+    <br><br><br><br><div class="fecontent1"><h3>The alt Attribute</h3></div><br><br>
+The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).<br>
+The value of the alt attribute should describe the image<br>
+    If a browser cannot find an image, it will display the value of the alt attribute<br>
+
+    <br><br><br><br><div class="fecontent1"><h3>Image Size - Width and Height</h3></div><br><br>
+You can use the style attribute to specify the width and height of an image<br>
+Alternatively, you can use the width and height attributes<br>
+    The width and height attributes always define the width and height of the image in pixels.<br>
+
+    <br><br><br><br><div class="fecontent1"><h3>Images in Another Folder and Website</h3></div><br><br>
+If you have your images in a sub-folder, you must include the folder name in the src attribute<br>
+Some web sites point to an image on another server.<br>
+    To point to an image on another server, you must specify an absolute (full) URL in the src attribute<br>
+    External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws.<br>
+    In addition, you cannot control external images; it can suddenly be removed or changed.<br>
+    <br><br>
+<div id="feimage17"><img src="{% static 'images/img33.png' %}"></div>
+
+    <br><br><div class="fecontent1"><h3>HTML Iframe Syntax</h3></div><br><br>
+The HTML &lt;iframe&gt; tag specifies an inline frame.<br>
+    An inline frame is used to embed another document within the current HTML document.<br><br>
+    &lt;iframe src="url" title="description"&gt;&lt;/iframe&gt;<br>
+    It is a good practice to always include a title attribute for the &lt;iframe&gt;.<br>
+    This is used by screen readers to read out what the content of the iframe is.<br>
+
+    <br><br><br><br>
+    <div class="fecontent1"><h3>Iframe - Set Height and Width</h3></div><br><br>
+Use the height and width attributes to specify the size of the iframe.<br>
+    The height and width are specified in pixels by default<br>
+    Or you can add the style attribute and use the CSS height and width properties<br>
+
+    <br><br><div class="fecontent1"><h3>Iframe - Remove the Border</h3></div><br><br><br><br>
+    By default, an iframe has a border around it.<br>
+    To remove the border, add the style attribute and use the CSS border property<br>
+
+    <br><br><div class="fecontent1"><h3>Iframe - Target for a Link</h3></div><br><br><br><br>
+    An iframe can be used as the target frame for a link.<br>
+    The target attribute of the link must refer to the name attribute of the iframe<br><br>
+<div id="feimage18"><img src="{% static 'images/img34.png' %}"></div>
+
+    <br><br><br><br><div class="fecontent1"><h3>Video Tutorial : Html Images and Iframes</h3></div><br><br>
+    <div id="fevideo7">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DgOpAeRFFas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div></b>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<b><div id="formcontent1" class="fecontent2">
+<div class="fecontent1"><h2>HTML Forms : </h2></div>
+    <br>
+    <div class="fecontent1"><h3>The &lt;form&gt; Element</h3></div><br><br>
+The HTML &lt;form&gt; element is used to create an HTML form for user input<br>
+    The &lt;form&gt; element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.<br>
+
+    <br><br><br><br><div class="fecontent1"><h3>The &lt;input&gt; Element</h3></div><br><br>
+The HTML &lt;input&gt; element is the most used form element.<br>
+An &lt;input&gt; element can be displayed in many ways, depending on the type attribute.<br>
+
+
+    <br><br><br><br><div class="fecontent1"><h3>Text Fields and &lt;label&gt; element</h3></div><br><br>
+The &lt;input type="text"&gt; defines a single-line input field for text input.<br>
+Notice the use of the &lt;label&gt; element in the example above.<br>
+    The &lt;label&gt; tag defines a label for many form elements.<br>
+    The &lt;label&gt; element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.<br>
+    The &lt;label&gt; element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the &lt;label&gt; element<br>
+    it toggles the radio button/checkbox.<br>
+    The for attribute of the &lt;label&gt; tag should be equal to the id attribute of the &lt;input&gt; element to bind them together.<br>
+
+    <br><br><br><br><div class="fecontent1"><h3>Radio Buttons and Checkboxes</h3></div><br><br>
+The &lt;input type="radio"&gt; defines a radio button.<br>
+Radio buttons let a user select ONE of a limited number of choices.<br>
+    The &lt;input type="checkbox"&gt; defines a checkbox.<br>
+    Checkboxes let a user select ZERO or MORE options of a limited number of choices.<br>
+
+
+    <br><br><br><br><div class="fecontent1"><h3>The Submit Button</h3></div><br><br>
+The &lt;input type="submit"&gt; defines a button for submitting the form data to a form-handler.<br>
+The form-handler is typically a file on the server with a script for processing input data.<br>
+    The form-handler is specified in the form's action attribute.<br>
+<br><br><br><div class="fecontent1"><h3>The Name Attribute for <input></h3></div><br><br>
+Notice that each input field must have a name attribute to be submitted.<br>
+If the name attribute is omitted, the value of the input field will not be sent at all.<br><br>
+
+<div id="feimage19"><img src="{% static 'images/img35.png' %}"></div>
+<br><br><br><br><div class="fecontent1"><h3>Video Tutorial : Html Images and Iframes</h3></div><br><br>
+    <div id="fevideo8">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2JrGepWlUvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div></b>
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="footer">
+<div class="footercontent">
+
+    <ul>
+        <li class="avatarli"><a id="fot6" href="Home.html"><img class="avatar" src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="fot5" href="Home.html">login</a></li>
+        <li ><a id="fot4" href="http://127.0.0.1:8000/">Contact</a></li>
+        <li ><a id="fot3" href="http://127.0.0.1:8000/">About</a></li>
+        <li ><a id="fot2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="fot1" href="http://127.0.0.1:8000/">Home</a></li>
+        <li id="footerimageli"><img id="footerimage" src="{% static 'images/img.png' %}"></li>
+    </ul>
+
+</div>
+</div>
+
+</body>
+</html>

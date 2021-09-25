@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Vcode</title>
+    <style>
+
+        #navmenu
+        {
+           background: #00F260;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to left, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           border-radius: 30px;
+           padding:0 0 5px 0;
+           overflow:hidden;
+           width: 100%;
+           position: fixed;
+
+        }
+
+        .navlink li
+        {
+            display: inline;
+            padding: 12px 50px;
+            float:right;
+            text-align:center;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius:30px;
+        }
+
+        [id ^="navr"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+
+       .navlink li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+        #navlist
+        {
+            float:left;
+        }
+
+
+
+        #heroimage
+        {
+            border-top-style: solid;
+            border-top-width: 85px;
+            border-top-color: white;
+            border-radius: 50px;
+            box-shadow: 10px 15px 10px grey;
+            background-image: url("{% static 'images/img.png' %}");
+            background-size: 100% 550px;
+            width:90%;
+            height:550px;
+            margin:auto;
+        }
+
+        .heroslide
+        {
+            display: none;
+        }
+
+        img.heroslide
+        {
+            display: none;
+            width: 90%;
+            height: 550px;
+            border-radius: 50px;
+        }
+
+        button.herobtn
+        {
+              height: 50px;
+              width: 50px;
+              background: #a8c0ff;  /* fallback for old browsers */
+              background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+              border-radius:2px;
+              position : absolute;
+
+
+        }
+
+        #herobtn1
+        {
+            box-shadow: -10px 10px 20px grey;
+            top: 350px;
+            left:55px;
+        }
+        #herobtn2
+        {
+            box-shadow: 10px 10px 20px grey;
+            top: 350px;
+            right:55px;
+        }
+
+        .introcontent
+        {
+            margin-top:100px;
+            margin-left:120px;
+            text-align:center;
+            width: 320px;
+            border-radius: 30px;
+            padding: 4px 0px;
+            box-shadow: 15px 15px 10px grey;
+            background: #673AB7;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #512DA8, #673AB7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #512DA8, #673AB7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .introcontent2
+        {
+            color:yellow;
+            margin: auto;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            width: 300px;
+            text-align: center;
+            border-radius: 20px;
+            background: #6a3093;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           }
+
+        .introcontent1
+        {
+            color:white;
+            font-family: Verdana,Sans-Serif;
+            width: 300px;
+            margin:auto;
+            text-align:center;
+            border-radius: 30px;
+            background: #DA22FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #9733EE, #DA22FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        #coursecontent
+        {
+            float:right;
+            margin-right:120px;
+            box-shadow: -15px 15px 10px grey;
+        }
+
+        #quizcontent
+        {
+            float:left;
+            margin-left:120px;
+            box-shadow: 15px 15px 10px grey;
+        }
+
+        #companioncontent
+        {
+            float:right;
+            margin-right:120px;
+            box-shadow: -15px 15px 10px grey;
+        }
+
+        #othercontent
+        {
+            float:left;
+            margin-left:120px;
+            box-shadow: 15px 15px 10px grey;
+        }
+
+        .contactcontent
+        {
+            margin-top:100px;
+            margin-left:120px;
+            text-align:center;
+            width: 320px;
+            border-radius: 30px;
+            padding: 4px 0px;
+            box-shadow: 15px 15px 10px grey;
+            background: #673AB7;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #512DA8, #673AB7);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #512DA8, #673AB7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+
+        .contactcontent2
+        {
+            color: yellow;
+            margin: auto;
+            font-family: Verdana,Sans-Serif;
+            font-size: 16px;
+            width: 300px;
+            text-align: center;
+            border-radius: 20px;
+             background: #6a3093;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           }
+
+        #developer1
+        {
+            margin-right:150px;
+            float:right;
+        }
+
+        #developer2
+        {
+            margin-left:150px;
+            float:left;
+        }
+
+        #devimg1
+        {
+            width:150px;
+            height:150px;
+            border-radius:50px;
+        }
+
+        #devimg2
+        {
+            border-radius:50px;
+            width:150px;
+            height:150px;
+        }
+
+        .contentimage
+        {
+            background-image: url("{% static 'images/img13.png' %}");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .contactcontent
+        {
+            background-image: url("{% static 'images/img13.png' %}");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .contactimage
+        {
+            height:900px;
+            background-image: url("{% static 'images/img14.gif' %}");
+            background-size: 100% 100%;
+
+        }
+
+        .smedia img
+        {
+            height: 280px;
+            width:280px;
+
+        }
+
+        .smedia h1
+        {
+            color: yellow;
+            font-family: Verdana,Sans-Serif;
+            text-align:center;
+        }
+
+        .contactvcode
+        {
+            height:400px;
+            padding: 0px 120px;
+            background-image: url("{% static 'images/img13.png' %}");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+
+        }
+
+        .footer
+        {
+            height:50px;
+            padding: 80px 300px;
+            background: #00F260;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .footercontent li
+        {
+            display:inline;
+            color: white;
+            font-family: Verdana,Sans-Serif;
+            tex-align:center;
+            font-size: 20px;
+            padding: 0px 20px;
+            float: right;
+        }
+
+        #footerimage
+        {
+            width:150px;
+            height:150px;
+
+
+        }
+
+        #footerimageli
+        {
+            position: relative;
+            right: 800px;
+            bottom: 90px;
+        }
+        [id ^="fot"]
+        {
+            display: block;
+            text-decoration: none;
+            text-align:center;
+            color: white;
+        }
+        .footercontent li:hover
+       {
+            box-shadow: 5px 5px 2px brown;
+            background: #00C9FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 30px;
+       }
+
+       .avatarli
+       {
+        border-style:none;
+       }
+
+       #avatarli
+       {
+        border-style:none;
+       }
+
+
+       .avatar
+       {
+         border-radius: 200px;
+         width:35px;
+         height:35px;
+       }
+
+       html
+       {
+            scroll-behavior: smooth;
+       }
+
+
+
+
+
+
+    </style>
+    <script>
+        var sindex=1;
+        showSlide(sindex);
+
+        function nextSlide(n)
+        {
+            showSlide(sindex=sindex+n);
+
+        }
+
+        function showSlide(n)
+        {
+            var i;
+            var slide = document.getElementsByClassName("heroslide");
+
+            if(n>slide.length)
+            {
+                sindex=1;
+            }
+            if(n<1)
+            {
+                sindex=slide.length;
+            }
+            for(i=0;i<slide.length;i++)
+            {
+                slide[i].style.display="none";
+            }
+            slide[sindex-1].style.display="block";
+
+        }
+
+    </script>
+</head>
+<body>
+<div id="navmenu">
+    <ul id="nav" class="navlink">
+        <li id="navlist"><a id="navr0" href="http://127.0.0.1:8000/roadmap">Course</a></li>
+        <li id="avatarli" class="avatarli"><a id="navr6" href="http://127.0.0.1:8000/login"><img class="avatar"  src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="navr5" href="http://127.0.0.1:8000/login">login</a></li>
+        <li ><a id="navr4" href="#developer1">Contact</a></li>
+        <li ><a id="navr3" href="#aboutvcode">About</a></li>
+        <li ><a id="navr2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="navr1" href="http://127.0.0.1:8000/">Home</a></li>
+    </ul>
+
+</div>
+
+<div class="contentimage">
+<div id="heroimage" align="center">
+    <img class="heroslide" src="{% static 'images/img.png' %}">
+    <img class="heroslide" src="{% static 'images/img1.png' %}">
+    <img class="heroslide" src="{% static 'images/img2.png' %}">
+    <img class="heroslide" src="{% static 'images/img3.gif' %}">
+    <img class="heroslide" src="{% static 'images/img4.png' %}">
+    <img class="heroslide" src="{% static 'images/img5.png' %}">
+    <img class="heroslide" src="{% static 'images/img6.png' %}">
+    <img class="heroslide" src="{% static 'images/img7.png' %}">
+    <img class="heroslide" src="{% static 'images/img8.gif' %}">
+    <img class="heroslide" src="{% static 'images/img9.gif' %}">
+    <img class="heroslide" src="{% static 'images/img10.gif' %}">
+
+    <button class="herobtn" id="herobtn1" onclick="nextSlide(-1)">&#10094;</button>
+    <button class="herobtn" id="herobtn2" onclick="nextSlide(1)">&#10095;</button>
+</div>
+
+
+
+<div class="introcontent">
+<div id="aboutvcode" class="introcontent1">
+    <h2 >ABOUT VCODE</h2>
+</div>
+<h1><div class="introcontent2">
+    At Vcode we will not only make you able to write a code but also make efficient to understand it<br><br>
+    Vcode originated to help web development enthusiast to get a one-stop solution and save their time
+    of referring different resources to learn to code<br><br>
+    We believe in 'Unite we stand , Unite Vcode'
+</div></h1>
+</div>
+
+
+<div id="coursecontent" class="introcontent">
+<div class="introcontent1">
+    <h2>LEARN VIA</h2>
+</div>
+<h1><div class="introcontent2">
+    Learn through systematic beginners to advance textual course<br><br>
+    Learn through examples for each sections<br><br>
+    Learn through video lectures video lectures for each concept
+</div></h1>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="quizcontent" class="introcontent">
+<div class="introcontent1">
+    <h2>TEST YOURSELF</h2>
+</div>
+<h1><div class="introcontent2">
+    Take quizzes for each topic<br><br>
+    Check your score<br><br>
+    Check the solution and keep on practising!!!!
+</div></h1>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="companioncontent" class="introcontent">
+<div class="introcontent1">
+    <h2>YOUR COMPANION</h2>
+</div>
+<h1><div class="introcontent2">
+    Companion is a online ide on which you can run your python codes<br><br>
+    Companion can be used to write notes when you learn<br><br>
+    You can save your codes and notes on your desktop<br><br>
+    You can move compiler anywhere on the screen ,resize and minimize
+</div></h1>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="othercontent" class="introcontent">
+<div class="introcontent1">
+    <h2>EXPLORE MORE</h2>
+</div>
+<h1><div class="introcontent2">
+    At Vcode we believe in sharing......<br><br>
+    Free books related to course are provided....<br><br>
+    Many more updates to come soon....<br><br>
+    Stay tuned!!!!!
+</div></h1>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<div class="contactimage">
+<div id="developer1" class="contactcontent">
+<div class="contactcontent1">
+<img id="devimg1" src="{% static 'images/img11.1.png' %}">
+</div>
+<h1><div class="contactcontent2">
+    Adhish Puro<br><br>
+    Full-stack developer at Vcode....<br><br>
+    Email: developer1@gmail.com <br><br>
+    Github-Id: Devloper1@Vcode <br><br>
+    Determined to help!!!!!
+</div></h1>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="developer2" class="contactcontent">
+<div class="contactcontent1">
+<img id="devimg2" src="{% static 'images/img12.png' %}">
+</div>
+<h1><div class="contactcontent2">
+    Sajal Pathak<br><br>
+    Full-stack developer at Vcode....<br><br>
+    Email: devloper2@gmail.com <br><br>
+    Github-Id: Devloper2@Vcode <br><br>
+    Determined to share!!!!!
+</div></h1>
+</div>
+</div>
+
+<br>
+
+
+<div class="contactvcode">
+<div class="smedia">
+    <h1>CONTACT VCODE AT</h1>
+
+    <img src="{% static 'images/img15.gif' %}">
+    <img src="{% static 'images/img16.gif' %}">
+    <img src="{% static 'images/img17.gif' %}">
+    <img src="{% static 'images/img18.gif' %}">
+
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="footer">
+<div class="footercontent">
+
+    <ul>
+        <li class="avatarli"><a id="fot6" href="Home.html"><img class="avatar" src="{% static 'images/img41.png' %}"></a></li>
+        <li ><a id="fot5" href="Home.html">login</a></li>
+        <li ><a id="fot4" href="#developer1">Contact</a></li>
+        <li ><a id="fot3" href="#aboutvcode">About</a></li>
+        <li ><a id="fot2" href="http://127.0.0.1:8000/IDE">Code</a></li>
+        <li ><a id="fot1" href="http://127.0.0.1:8000/">Home</a></li>
+        <li id="footerimageli"><img id="footerimage" src="{% static 'images/img.png' %}"></li>
+    </ul>
+
+</div>
+</div>
+
+</body>
+</html>
